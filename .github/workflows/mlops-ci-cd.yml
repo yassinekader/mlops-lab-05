@@ -10,6 +10,7 @@ on:
 jobs:
   ci:
     runs-on: ubuntu-latest
+    environment: production
 
 
     steps:
@@ -85,6 +86,7 @@ jobs:
   cd:
     needs: ci
     runs-on: ubuntu-latest
+    environment: production
     if: github.ref == 'refs/heads/main'
 
 
